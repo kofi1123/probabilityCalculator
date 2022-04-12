@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability calculator</title>
+    <link rel = "stylesheet" href = "main.css">
+    <script src = "main.js"></script>
+</head>
+<body>
+    <h3>Probability Calculator</h3>
+    <div class = "result">
+        <label class = "result">Result</label>
+        <input type="text" id="calc" name="calculation" class = "result" value="Result" readonly>
+    </div>
+    <br class = "result">
+    <div>
+        <label>Factor</label>
+        <input name = "factor" type = "text" maxlength = "20" id = "factor"/>
+        <div id="factorErr" class="emsg"></div>
+        <label>Capacity</label>
+        <input name = "capacity" type = "text" id = "capacity">
+        <label>Max</label>
+        <input name = "max" type = "text" id = "max">
+        <div id="maxErr" class="emsg"></div>
+        <label>Operation</label>
+        <select name="operation" id="operation">
+            <option value="default">Select Operation</option>
+            <option value="exactlyMax">Exactly [max] out of [capacity]</option>
+            <option value="atLeastMax">At Least [max] out of [capacity]</option>
+            <option value="atMostMax">At Most [max] out of [capacity]</option>
+        </select>
+        <button onclick = "calculateProbability()" class = "button">Calculate!</button>
+    </div>
+</body>
+</html>
